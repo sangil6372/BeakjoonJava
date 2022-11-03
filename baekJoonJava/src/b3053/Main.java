@@ -8,14 +8,11 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		
 		int n = sc.nextInt();
-		double a1 = n*n*Math.PI;
-		double a2 = n*n*2;
+		double Euclid = n*n*Math.PI;
+		double taxi = n*n*2;
 		
-		sc.close();
-		
-		System.out.println(a1);
-		System.out.println(a2);
+		System.out.println(String.format("%.6f", Euclid));
+		System.out.println(String.format("%.6f", taxi));
 		
 	}
-
 }
