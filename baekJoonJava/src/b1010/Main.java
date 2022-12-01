@@ -9,7 +9,7 @@ public class Main {
 		int rep = sc.nextInt();
 		int n,m;
 		int[][] tr = new int[31][31];
-		
+
 		for (int i =0;i<31;i++) {
 			for (int j =0;j<=i;j++) {
 				if (i==j||j==0) tr[i][j] = 1;
