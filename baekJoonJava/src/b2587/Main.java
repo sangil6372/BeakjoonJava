@@ -1,7 +1,7 @@
 package b2587;
 
-import java.util.Scanner;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
 
