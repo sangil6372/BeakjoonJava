@@ -27,7 +27,6 @@ public class Main {
 		for (int i = 0; i < N; i++) {
 			result += arr[i]*(N-i);
 		}
-		1
 		System.out.println(result);
 	}
 }
