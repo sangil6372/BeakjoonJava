@@ -40,6 +40,7 @@ public class Main {
 			graph.get(v1).add(v2);
 			graph.get(v2).add(v1);
 		}
+		
 
 		for (int i = 1; i <= N; i++) {
 			Collections.sort(graph.get(i), new Comparator<Integer>() {
