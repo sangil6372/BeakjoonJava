@@ -1,61 +1,55 @@
 package backTracking.b15649;
 
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.Scanner;
 
 public class Main {
 
-	static int[] dp;
-	static int[][] wire;
+	static int N, M;
+	static int[] graph;
+	static int[] visited;
+	static int depth = 0;
+	static StringBuilder sb;
 
-	public static void main(String[] args) {
+	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
+		sb = new StringBuilder();
 
-		int N = sc.nextInt();
+		N = sc.nextInt();
+		M = sc.nextInt();
 
-		wire = new int[N][2];
-		dp = new int[N];
+		graph = new int[N + 1];
+		visited = new int[N + 1];
 
-		// wire 입력
-		for (int i = 0; i < N; i++) {
-			wire[i][0] = sc.nextInt();
-			wire[i][1] = sc.nextInt();
-		}
-
-		Arrays.sort(wire, new Comparator<int[]>() {
-			@Override
-			public int compare(int[] o1, int[] o2) {
-				if (o1[0] < o2[0])
-					return -1;
-				else if (o1[0] == o2[0])
-					return 0;
-				else
-					return 1;
-			}
-		});
-
-		int max = 1;
-
-		for (int i = 0; i < N; i++) {
-			max = Math.max(max, recur(i));
-		}
-
-		System.out.println(N - max);
-
+		dfs(1);
+		
+		System.out.println(sb);
+		
 		sc.close();
 	}
 
-	public static int recur(int n) {
-		if (dp[n] == 0) {
-			dp[n] = 1;
-			for (int i = n + 1; i < dp.length; i++) {
-				if (wire[n][1] < wire[i][1]) {
-					dp[n] = Math.max(dp[n], recur(i) + 1);
-				}
+	public static void dfs(int depth) {
+		if (depth==M+1) {
+			for (int i = 1;i<=M;i++) {
+				sb.append(graph[i] + " ");
+			}
+			sb.append("\n");
+			return;
+		}
+		
+		
+		
+		for (int i = 1; i <= N; i++) {
+			
+			if (visited[i]==0) {
+				visited[i] = 1;
+				graph[depth] = i; 
+				
+				dfs(depth+1);
+				
+				visited[i] = 0;
 			}
 		}
-		return dp[n];
+
 	}
 
 }
