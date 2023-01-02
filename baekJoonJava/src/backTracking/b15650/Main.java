@@ -38,7 +38,7 @@ public class Main {
 		
 		for (int i = 1; i <= N; i++) {
 			
-			if (i>v) {
+			if (i>=v) {
 				graph[depth] = i; 
 				
 				dfs(i, depth+1);
