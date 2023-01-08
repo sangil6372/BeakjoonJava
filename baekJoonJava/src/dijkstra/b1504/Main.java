@@ -14,7 +14,7 @@ public class Main {
 	static ArrayList<ArrayList<Node>> graph;
 	static int N;
 	static int[] dist; // dist 계쏙해서 갱신할 것임
-	final static int INF = 999999;
+	final static int INF = 200000000;
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
