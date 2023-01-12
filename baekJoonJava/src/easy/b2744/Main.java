@@ -1,6 +1,5 @@
 package easy.b2744;
 
-import java.util.Iterator;
 import java.util.Scanner;
 
 public class Main {
@@ -20,6 +19,6 @@ public class Main {
 		}
 		System.out.println(sb);
 		
+		sc.close();
 	}
-
 }
