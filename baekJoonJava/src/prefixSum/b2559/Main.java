@@ -13,8 +13,8 @@ public class Main {
 		
 		int[] arr = new int[N+1];
 		
-		int max = 0;
-		for (int i = 1;i<N;i++) {
+		int max = -500;
+		for (int i = 1;i<=N;i++) {
 			arr[i] = sc.nextInt() + arr[i-1];
 			if (i>=K) {
 				if (max<arr[i]-arr[i-K]) max = arr[i]-arr[i-K];
