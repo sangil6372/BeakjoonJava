@@ -107,6 +107,7 @@ public class Main {
 			} else {
 				move(left);
 			}
+			
 		}
 
 	}
