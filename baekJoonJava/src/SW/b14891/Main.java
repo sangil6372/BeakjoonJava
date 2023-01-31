@@ -41,7 +41,6 @@ public class Main {
 		}
 		int sum = 0;
 		for (int i = 1; i < 5; i++) {
-			System.out.println(gear[i][0]);
 			if (gear[i][0] == 1) { // S 극인지 확인
 				sum += Math.pow(2, i - 1);
 			}
