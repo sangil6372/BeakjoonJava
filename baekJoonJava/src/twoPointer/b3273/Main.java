@@ -1,4 +1,4 @@
-package toPointer.b3273;
+package twoPointer.b3273;
 
 import java.io.BufferedReader;
 import java.io.IOException;
