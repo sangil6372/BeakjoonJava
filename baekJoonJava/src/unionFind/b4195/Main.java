@@ -34,20 +34,20 @@ public class Main {
 			
 			int idx = 0;
 			while(F-->0) {
-				String a = sc.next();
-				String b = sc.next();
+				String friendA = sc.next();
+				String friendB = sc.next();
 				
-				if (!relation.containsKey(a)) {
+				if (!relation.containsKey(friendA)) {
 					parent[idx] = idx; // 초기화 과정
-					relation.put(a, idx++); // 스스로의 idx를 가리키게
+					relation.put(friendA, idx++); // 스스로의 idx를 가리키게
 				}
-				if (!relation.containsKey(b)) {
+				if (!relation.containsKey(friendB)) {
 					parent[idx] = idx; // 초기화 과정
-					relation.put(b, idx++);
+					relation.put(friendB, idx++);
 				}
 				
-				union(relation.get(a), relation.get(b));
-				System.out.println(cnt[find(relation.get(a))]);
+				union(relation.get(friendA), relation.get(friendB));
+				System.out.println(cnt[find(relation.get(friendA))]);
 				
 				
 			}
