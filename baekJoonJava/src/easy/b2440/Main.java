@@ -1,4 +1,4 @@
-package easy.b2440;
+package easy.b2440; 
 
 import java.util.Scanner;
 
