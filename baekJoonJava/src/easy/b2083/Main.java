@@ -22,6 +22,6 @@ public class Main {
 			age = sc.nextInt();
 			weight = sc.nextInt();
 		}
+		sc.close();
 	}
-
 }
